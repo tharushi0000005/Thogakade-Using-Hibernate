@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="506.0" prefWidth="1028.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pos.hibernate.controller.ItemFormController">
+   <children>
+      <AnchorPane prefHeight="92.0" prefWidth="1028.0" style="-fx-background-color: #1e5f74;">
+         <children>
+            <Label alignment="CENTER" layoutY="-2.0" prefHeight="92.0" prefWidth="1029.0" text="Item Form" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="33.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="51.0" fitWidth="99.0" layoutX="955.0" layoutY="434.0" onMouseClicked="#backOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/icons8-home-50.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblItem" layoutX="73.0" layoutY="269.0" prefHeight="216.0" prefWidth="866.0">
+        <columns>
+          <TableColumn fx:id="colCode" prefWidth="120.0" text="Code" />
+          <TableColumn fx:id="colDescription" prefWidth="238.0" text="Descriptiom" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="210.0" text="Unit Price" />
+            <TableColumn fx:id="colQtyOnHand" prefWidth="150.0" text="Qty On Hand" />
+            <TableColumn fx:id="colOperate" prefWidth="147.0" text="Operate" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txtCode" labelFloat="true" layoutX="34.0" layoutY="131.0" prefHeight="51.0" prefWidth="194.0" promptText="Item Code" unFocusColor="#1e5f74" />
+      <JFXTextField fx:id="txtDescription" labelFloat="true" layoutX="268.0" layoutY="131.0" prefHeight="51.0" prefWidth="212.0" promptText="Description" />
+      <JFXTextField fx:id="txtUnitPrice" labelFloat="true" layoutX="532.0" layoutY="131.0" prefHeight="51.0" prefWidth="194.0" promptText="Unit Price" />
+      <JFXTextField fx:id="txtQtyOnHand" labelFloat="true" layoutX="769.0" layoutY="131.0" prefHeight="51.0" prefWidth="212.0" promptText="Qty On Hand" />
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="242.0" layoutY="222.0" onAction="#btnSaveOnAction" prefHeight="31.0" prefWidth="132.0" style="-fx-background-color: #2ec1ac; -fx-background-radius: 50;" text="Save">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton fx:id="btnUpdate" layoutX="449.0" layoutY="222.0" onAction="#btnUpdateOnAction" prefHeight="31.0" prefWidth="132.0" style="-fx-background-color: #51adcf; -fx-background-radius: 50;" text="Update">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton fx:id="btnSearch" layoutX="660.0" layoutY="222.0" onAction="#btnSearchOnAction" prefHeight="31.0" prefWidth="132.0" style="-fx-background-color: #f05454; -fx-background-radius: 50;" text="Search">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+   </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</AnchorPane>
